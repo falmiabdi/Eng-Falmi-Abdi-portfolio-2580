@@ -25,8 +25,8 @@ const Skills = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Skills</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+            My Skills
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A comprehensive overview of my technical expertise and proficiency levels across
@@ -52,7 +52,7 @@ const Skills = () => {
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 group-hover:scale-110 transition-transform">
                         <Icon className="w-5 h-5 text-primary" />
                       </div>
-                      <h3 className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-lg font-semibold text-yellow-400 group-hover:text-primary transition-colors duration-300">
                         {skill.name}
                       </h3>
                     </div>

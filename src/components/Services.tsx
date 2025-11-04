@@ -37,8 +37,8 @@ const Services = () => {
     <section id="services" className="py-20 md:py-32 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+            My Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive development services to bring your digital vision to life with
@@ -59,7 +59,7 @@ const Services = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 text-yellow-400 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
 

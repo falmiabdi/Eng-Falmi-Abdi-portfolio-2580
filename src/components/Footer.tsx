@@ -12,8 +12,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold mb-2">
-              Falmi <span className="gradient-text">Tesfaye</span>
+            <h3 className="text-xl font-bold mb-2 text-yellow-400">
+              Falmi Tesfaye
             </h3>
             <p className="text-muted-foreground text-sm">
               Full-Stack Developer & Software Engineer

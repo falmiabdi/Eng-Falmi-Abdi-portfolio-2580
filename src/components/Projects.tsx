@@ -38,8 +38,8 @@ const Projects = () => {
     <section id="projects" className="py-20 md:py-32 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+            Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and projects that demonstrate my skills and passion
@@ -80,7 +80,7 @@ const Projects = () => {
 
               {/* Project Content */}
               <div className="p-6 relative z-10">
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{project.title}</h3>
+                <h3 className="text-2xl font-bold mb-3 text-yellow-400 group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">{project.description}</p>
 
                 {/* Tags */}

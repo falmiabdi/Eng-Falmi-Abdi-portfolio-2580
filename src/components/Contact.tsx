@@ -55,8 +55,8 @@ const Contact = () => {
     <section id="contact" className="py-20 md:py-32 relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-yellow-400">
+            Get In Touch
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach out. I'd love
@@ -78,7 +78,7 @@ const Contact = () => {
                     <info.icon className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors duration-300">{info.label}</h3>
+                    <h3 className="font-semibold mb-1 text-yellow-400 group-hover:text-primary transition-colors duration-300">{info.label}</h3>
                     {info.link ? (
                       <a
                         href={info.link}

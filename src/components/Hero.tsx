@@ -48,13 +48,13 @@ const Hero = () => {
           </div>
 
           {/* Name */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-scale-in">
-            <span className="inline-block hover:scale-110 transition-transform duration-300 text-yellow-400">Falmi</span>{" "}
-            <span className="gradient-text inline-block hover:scale-110 transition-transform duration-300">Tesfaye</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-scale-in text-yellow-400">
+            <span className="inline-block hover:scale-110 transition-transform duration-300">Falmi</span>{" "}
+            <span className="inline-block hover:scale-110 transition-transform duration-300">Tesfaye</span>
           </h1>
 
           {/* Title */}
-          <h2 className="text-2xl md:text-4xl font-semibold text-foreground/90 mb-8 animate-fade-in">
+          <h2 className="text-2xl md:text-4xl font-semibold text-yellow-400 mb-8 animate-fade-in">
             Full-Stack Developer <span className="text-primary">&</span> Software Engineer
           </h2>
 
