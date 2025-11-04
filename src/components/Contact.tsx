@@ -70,19 +70,19 @@ const Contact = () => {
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
-                className="glass-card p-6 hover-lift"
+                className="interactive-card glass-card p-6 hover-lift border-2 border-transparent hover:border-primary/30 group"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <info.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                    <info.icon className="w-7 h-7 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold mb-1">{info.label}</h3>
+                    <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors duration-300">{info.label}</h3>
                     {info.link ? (
                       <a
                         href={info.link}
-                        className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                        className="text-muted-foreground hover:text-primary transition-colors text-sm block"
                       >
                         {info.value}
                       </a>
@@ -97,7 +97,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Card
-            className="md:col-span-2 glass-card p-8 animate-fade-in"
+            className="md:col-span-2 interactive-card glass-card p-8 animate-fade-in border-2 border-primary/20"
             style={{ animationDelay: "0.3s" }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -113,7 +113,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="John Doe"
-                    className="glass-card border-white/10"
+                    className="glass-card border-primary/20 focus:border-primary transition-colors"
                   />
                 </div>
                 <div>
@@ -128,7 +128,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="john@example.com"
-                    className="glass-card border-white/10"
+                    className="glass-card border-primary/20 focus:border-primary transition-colors"
                   />
                 </div>
               </div>
@@ -144,7 +144,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Project Inquiry"
-                  className="glass-card border-white/10"
+                  className="glass-card border-primary/20 focus:border-primary transition-colors"
                 />
               </div>
 
@@ -160,13 +160,13 @@ const Contact = () => {
                   required
                   placeholder="Tell me about your project..."
                   rows={6}
-                  className="glass-card border-white/10 resize-none"
+                  className="glass-card border-primary/20 focus:border-primary resize-none transition-colors"
                 />
               </div>
 
-              <Button type="submit" variant="hero" size="lg" className="w-full">
+              <Button type="submit" variant="hero" size="lg" className="w-full group">
                 Send Message
-                <Send className="ml-2 w-4 h-4" />
+                <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
             </form>
           </Card>

@@ -34,7 +34,7 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-card shadow-lg" : "bg-transparent"
+        scrolled ? "glass-card shadow-xl shadow-primary/10" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -54,10 +54,10 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-foreground/80 hover:text-primary transition-colors relative group"
+                className="text-foreground/80 hover:text-primary transition-colors relative group py-2"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all group-hover:w-full duration-300" />
               </a>
             ))}
             <Button variant="hero" size="sm" onClick={() => scrollToSection("#contact")}>

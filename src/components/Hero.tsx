@@ -27,26 +27,35 @@ const Hero = () => {
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-float pulse-glow" />
+        <div className="absolute bottom-1/4 right-1/4 w-[32rem] h-[32rem] bg-secondary/20 rounded-full blur-3xl animate-float pulse-glow" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-accent/10 rounded-full blur-3xl animate-pulse-scale" />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-primary rounded-full animate-float" style={{ animationDelay: "0.5s" }} />
+        <div className="absolute top-2/3 left-2/3 w-3 h-3 bg-secondary rounded-full animate-float" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/2 right-1/3 w-2 h-2 bg-accent rounded-full animate-float" style={{ animationDelay: "2s" }} />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           {/* Greeting */}
-          <p className="text-primary text-lg md:text-xl mb-4 animate-fade-in-down">
-            Hello, I'm
-          </p>
+          <div className="inline-block glass-card px-6 py-2 rounded-full mb-6 animate-fade-in-down">
+            <p className="text-primary text-sm md:text-base font-medium">
+              👋 Hello, I'm
+            </p>
+          </div>
 
           {/* Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-scale-in">
-            Falmi <span className="gradient-text">Tesfaye</span>
+            <span className="inline-block hover:scale-110 transition-transform duration-300">Falmi</span>{" "}
+            <span className="gradient-text inline-block hover:scale-110 transition-transform duration-300">Tesfaye</span>
           </h1>
 
           {/* Title */}
-          <h2 className="text-2xl md:text-4xl font-semibold text-foreground/80 mb-8 animate-fade-in">
-            Full-Stack Developer & Software Engineer
+          <h2 className="text-2xl md:text-4xl font-semibold text-foreground/90 mb-8 animate-fade-in">
+            Full-Stack Developer <span className="text-primary">&</span> Software Engineer
           </h2>
 
           {/* Description */}
@@ -80,23 +89,23 @@ const Hero = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
+              className="glass-card p-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/50 group"
             >
-              <Github size={24} />
+              <Github size={24} className="group-hover:rotate-12 transition-transform duration-300" />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
+              className="glass-card p-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/50 group"
             >
-              <Linkedin size={24} />
+              <Linkedin size={24} className="group-hover:rotate-12 transition-transform duration-300" />
             </a>
             <a
               href="mailto:falmi@example.com"
-              className="glass-card p-3 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
+              className="glass-card p-4 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-primary/50 group"
             >
-              <Mail size={24} />
+              <Mail size={24} className="group-hover:rotate-12 transition-transform duration-300" />
             </a>
           </div>
         </div>

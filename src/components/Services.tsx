@@ -50,24 +50,24 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="glass-card p-8 hover-lift group animate-fade-in"
+              className="interactive-card glass-card p-8 hover-lift group animate-fade-in border-2 border-transparent hover:border-primary/30"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/50 transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center group-hover:bg-primary group-hover:shadow-xl group-hover:shadow-primary/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+                  <service.icon className="w-10 h-10 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">{service.title}</h3>
 
-              <p className="text-muted-foreground mb-6">{service.description}</p>
+              <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    <span className="text-sm text-foreground/80">{feature}</span>
+                  <div key={idx} className="flex items-center gap-3 group/feature">
+                    <div className="w-2 h-2 rounded-full bg-primary group-hover/feature:scale-125 transition-transform duration-300" />
+                    <span className="text-sm text-foreground/80 group-hover/feature:text-foreground group-hover/feature:translate-x-1 transition-all duration-300">{feature}</span>
                   </div>
                 ))}
               </div>

@@ -31,23 +31,24 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <Card
               key={skill.name}
-              className="glass-card p-6 hover-lift animate-fade-in"
+              className="interactive-card glass-card p-6 hover-lift animate-fade-in border-2 border-transparent hover:border-primary/20 group"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-lg font-semibold">{skill.name}</h3>
-                <span className="text-primary font-bold">{skill.level}%</span>
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold group-hover:text-primary transition-colors duration-300">{skill.name}</h3>
+                <span className="text-primary font-bold text-xl px-3 py-1 rounded-lg glass-card">{skill.level}%</span>
               </div>
 
-              <div className="relative h-3 bg-muted rounded-full overflow-hidden">
+              <div className="relative h-4 bg-muted/50 rounded-full overflow-hidden">
                 <div
-                  className={`absolute top-0 left-0 h-full ${skill.color} rounded-full transition-all duration-1000 ease-out`}
+                  className={`absolute top-0 left-0 h-full ${skill.color} rounded-full transition-all duration-1000 ease-out shadow-lg`}
                   style={{
                     width: `${skill.level}%`,
                     animationDelay: `${index * 0.1}s`,
                   }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/20" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-transparent" />
                 </div>
               </div>
             </Card>

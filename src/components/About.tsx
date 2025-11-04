@@ -18,13 +18,16 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image & Stats */}
           <div className="relative animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden glass-card p-2">
+            <div className="relative rounded-2xl overflow-hidden glass-card p-3 border-2 border-primary/20">
               <img
                 src={developerPhoto}
                 alt="Falmi Tesfaye"
-                className="w-full rounded-xl object-cover"
+                className="w-full rounded-xl object-cover hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent pointer-events-none" />
+              
+              {/* Decorative glow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent opacity-20 blur-2xl -z-10 animate-pulse-scale" />
             </div>
 
             {/* Floating Stats */}
@@ -32,7 +35,7 @@ const About = () => {
               {stats.map((stat, index) => (
                 <Card
                   key={index}
-                  className="glass-card p-4 text-center hover-lift animate-scale-in"
+                  className="interactive-card glass-card p-4 text-center hover-lift animate-scale-in border-2 border-transparent hover:border-primary/30"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
@@ -68,7 +71,7 @@ const About = () => {
                 (skill) => (
                   <span
                     key={skill}
-                    className="px-4 py-2 glass-card text-sm rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    className="px-4 py-2 glass-card text-sm rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 cursor-default border border-transparent hover:border-primary/50"
                   >
                     {skill}
                   </span>
@@ -79,7 +82,7 @@ const About = () => {
             {/* Read More Dialog */}
             <Dialog>
               <DialogTrigger asChild>
-                <Button variant="hero">Read More About My Journey</Button>
+                <Button variant="hero" size="lg">Read More About My Journey</Button>
               </DialogTrigger>
               <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
                 <DialogHeader>
