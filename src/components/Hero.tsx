@@ -49,7 +49,7 @@ const Hero = () => {
 
           {/* Name */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-scale-in">
-            <span className="inline-block hover:scale-110 transition-transform duration-300">Falmi</span>{" "}
+            <span className="inline-block hover:scale-110 transition-transform duration-300 text-yellow-400">Falmi</span>{" "}
             <span className="gradient-text inline-block hover:scale-110 transition-transform duration-300">Tesfaye</span>
           </h1>
 
