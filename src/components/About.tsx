@@ -48,8 +48,8 @@ const About = () => {
 
           {/* Content */}
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-400">
-              About Me
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-yellow-400">About</span> <span className="text-white">Me</span>
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6">
