@@ -171,7 +171,7 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center lg:justify-start gap-3">
               {/* GitHub - Yellow */}
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/falmiabdi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-yellow-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20"

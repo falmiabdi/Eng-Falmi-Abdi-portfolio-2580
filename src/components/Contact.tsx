@@ -327,7 +327,7 @@ const Contact = () => {
               LinkedIn
             </a>
             <a
-              href="https://github.com/yourprofile"
+              href="https://github.com/falmiabdi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors"
