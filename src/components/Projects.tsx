@@ -1,204 +1,308 @@
 import { useState } from "react";
+
+// Video Imports - REMOVED ALL
+// import codeHeavenVideo from "@/assets/video/codeHeaven.mp4";
+// import chellaVideo from "@/assets/video/chella Reward App.mp4";
+// import lensuCafeVideo from "@/assets/video/lensu cafe .mp4";
+// import kakuuVideo from "@/assets/video/kakuu  mammee dive  in and delivary.mp4";
+// import famDictionaryVideo from "@/assets/video/Fam Dictionary.mp4";
+
+// Project Image Imports
+// Lensu Cafe (id: 1)
+import lensuCafeHero from "@/assets/lensu_cafe/hero.png";
+import lensuCafeMenu from "@/assets/lensu_cafe/menu.png";
+import lensuCafeBooking from "@/assets/lensu_cafe/booking.png";
+
+// Kakuu Mamme (id: 2)
+import kakuuHero from "@/assets/kakuu mammee images show/herosection.jpg";
+import kakuuAbout from "@/assets/kakuu mammee images show/about us.jpg";
+import kakuuDashboard from "@/assets/kakuu mammee images show/dashboard.jpg";
+import kakuuAdmin from "@/assets/kakuu mammee images show/admin dashboard.jpg";
+import kakuuBooking from "@/assets/kakuu mammee images show/booking.jpg";
+import kakuuMenu from "@/assets/kakuu mammee images show/menu.jpg";
+import kakuuDashboard2 from "@/assets/kakuu mammee images show/dashboard (2).jpg";
+import kakuuImages3 from "@/assets/kakuu mammee images show/images3.jpg";
+
+// Student Union Vote (id: 3)
+import studentVoteImg from "@/assets/Design/photo_2026-01-20_13-43-04.jpg";
+
+// CodeHeaven (id: 4)
+import codeHeavenHero from "@/assets/codeHeaven images/hero image.jpg";
+import codeHeavenImg2 from "@/assets/codeHeaven images/img2.jpg";
+import codeHeavenImg3 from "@/assets/codeHeaven images/imag3.jpg";
+import codeHeavenImg4 from "@/assets/codeHeaven images/img4.jpg";
+
+// Weather+Route (id: 5)
+import weather1 from "@/assets/weatherapp Design photoApp/weather1.jpg";
+import weather2 from "@/assets/weatherapp Design photoApp/weather2.jpg";
+import weather3 from "@/assets/weatherapp Design photoApp/weather3.jpg";
+import weather5 from "@/assets/weatherapp Design photoApp/weather5.jpg";
+import weather6 from "@/assets/weatherapp Design photoApp/weather6.jpg";
+
+// Chella Gram (id: 6)
+import chellaHero from "@/assets/chella images/hero images (1).jpg";
+import chellaHero2 from "@/assets/chella images/hero images (2).jpg";
+import chellaDashboard from "@/assets/chella images/dashboard.jpg";
+
+// FamDictionary (id: 7)
+import famDictImg from "@/assets/Design/photo_2026-01-20_13-42-58.jpg";
+
+// HireHub (id: 8)
+import hireHubHero from "@/assets/HireHub Deisgn photo screenshot/img1 Hero.jpg";
+import hireHubDashboard1 from "@/assets/HireHub Deisgn photo screenshot/dashboard1.jpg";
+import hireHubDashboard2 from "@/assets/HireHub Deisgn photo screenshot/dashboard2.jpg";
+import hireHubDashboard3 from "@/assets/HireHub Deisgn photo screenshot/dashboard3.jpg";
+import hireHubImg2 from "@/assets/HireHub Deisgn photo screenshot/img2.jpg";
+import hireHubImg3 from "@/assets/HireHub Deisgn photo screenshot/img3.jpg";
+import hireHubImg4 from "@/assets/HireHub Deisgn photo screenshot/img4.jpg";
+import hireHubImg5 from "@/assets/HireHub Deisgn photo screenshot/img5.jpg";
+
+// Additional Assets
+import sonsaCeo from "@/assets/SonsaCeo.png";
+import youtubers from "@/assets/youtubers.png";
+import falmiDesigner from "@/assets/Falmi Designer.png";
+import developerPhoto from "@/assets/developer-photo.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
+import servicesIcon from "@/assets/services-icon.png";
+
 import { Card } from "./ui/card";
-import { Button } from "./ui/button";
 import {
   ExternalLink,
   Github,
   Play,
   X,
   ChevronRight,
-  Maximize2,
-  Eye,
-  Smartphone,
   Monitor,
-  Database,
-  Users,
-  Briefcase,
+  Smartphone,
   ChefHat,
-  FlaskConical,
   Vote,
+  Database,
+  Cloud,
+  Building2,
+  MessageSquare,
+  Briefcase,
+  Image as ImageIcon,
 } from "lucide-react";
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [activeDemo, setActiveDemo] = useState<"mobile" | "desktop">("desktop");
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects = [
     {
       id: 1,
-      title: "Job Portal System",
+      title: "Lensu Cafe",
       description:
-        "Full-featured job portal connecting companies with job seekers. Company dashboard for posting jobs, candidate dashboard for applications, and admin panel for management.",
-      tags: [
-        "PHP",
-        "MySQL",
-        "JavaScript",
-        "Bootstrap",
-        "AJAX",
-        "Session Management",
-      ],
-      color: "from-blue-600 to-indigo-600",
-      icon: <Briefcase className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://job-portal-yourusername.vercel.app",
-      githubUrl: "https://github.com/yourusername/job-portal",
+        "Modern restaurant booking and ordering system with online reservations, menu management, and customer dashboard.",
+      tags: ["PHP", "MySQL", "Bootstrap", "jQuery", "REST API"],
+      color: "from-purple-600 to-purple-800",
+      icon: <ChefHat className="w-5 h-5" />,
+      image: lensuCafeHero,
+      thumbnail: lensuCafeHero,
+      screenshots: [lensuCafeHero, lensuCafeMenu, lensuCafeBooking],
+      demoUrl: "https://lensu-cafe-q16rbzn3z-falmiabdis-projects.vercel.app",
+      githubUrl: "https://github.com/yourusername/lensu-cafe",
       features: [
-        "Company & Candidate dashboards",
-        "Job posting & management system",
-        "Resume upload & application tracking",
-        "Real-time job notifications",
-        "Admin panel with user management",
-        "Search & filter jobs by category",
+        "Online table booking system",
+        "Digital menu with categories",
+        "Order tracking and management",
+        "Customer reviews and ratings",
+        "Admin dashboard for management",
+        "Payment integration",
       ],
       demoType: "interactive",
       status: "Ready for Vercel Deployment",
-      techIcons: ["PHP", "MySQL", "JS", "Bootstrap"],
+      techIcons: ["PHP", "MySQL", "Bootstrap"],
+      hasVideo: false,
     },
     {
       id: 2,
-      title: "Restaurant Booking System",
+      title: "Kakuu Mamme",
       description:
-        "Complete restaurant management platform with online table reservations, food ordering, and customer management system.",
-      tags: [
-        "PHP",
-        "MySQL",
-        "Bootstrap",
-        "jQuery",
-        "REST API",
-        "Payment Integration",
-      ],
-      color: "from-green-600 to-emerald-600",
+        "Full-featured food delivery platform with restaurant partnerships, real-time order tracking, and delivery management.",
+      tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "Payment Integration"],
+      color: "from-yellow-500 to-yellow-600",
       icon: <ChefHat className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://lensu-cafe-q16rbzn3z-falmiabdis-projects.vercel.app",
-      githubUrl: "https://github.com/yourusername/restoran-booking",
+      image: kakuuHero,
+      thumbnail: kakuuHero,
+      screenshots: [kakuuHero, kakuuAbout, kakuuDashboard, kakuuAdmin, kakuuBooking, kakuuMenu, kakuuDashboard2, kakuuImages3],
+      demoUrl: "https://kakuu-mamme-yourusername.vercel.app",
+      githubUrl: "https://github.com/yourusername/kakuu-mamme",
       features: [
-        "Online table booking system",
-        "Food menu with categories & pricing",
-        "Order management & tracking",
-        "Customer reviews & ratings",
-        "Admin dashboard for restaurant management",
-        "Payment gateway integration",
+        "Restaurant partner dashboard",
+        "Customer ordering interface",
+        "Real-time delivery tracking",
+        "Multiple payment options",
+        "Order history and favorites",
+        "Admin management panel",
       ],
       demoType: "interactive",
       status: "Ready for Vercel Deployment",
-      techIcons: ["PHP", "MySQL", "Bootstrap", "jQuery"],
+      techIcons: ["PHP", "MySQL", "JavaScript"],
+      hasVideo: false,
     },
     {
       id: 3,
-      title: "Student Union Election System",
+      title: "Student Union Vote",
       description:
-        "Secure online voting platform for student union elections with real-time results and candidate management.",
-      tags: [
-        "PHP",
-        "MySQL",
-        "JavaScript",
-        "Chart.js",
-        "Security",
-        "Real-time Updates",
-      ],
-      color: "from-purple-600 to-pink-600",
+        "Secure online voting platform for student union elections with candidate management, real-time results, and audit trail.",
+      tags: ["PHP", "MySQL", "Chart.js", "Security", "Real-time Updates"],
+      color: "from-purple-600 to-purple-800",
       icon: <Vote className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://student-election-yourusername.vercel.app",
-      githubUrl: "https://github.com/yourusername/student-election",
+      image: studentVoteImg,
+      thumbnail: studentVoteImg,
+      screenshots: [studentVoteImg],
+      demoUrl: "https://student-union-vote-yourusername.vercel.app",
+      githubUrl: "https://github.com/yourusername/student-union-vote",
       features: [
-        "Secure voter authentication system",
-        "Candidate nomination & profile management",
-        "Real-time vote counting & results",
-        "Results visualization with charts",
-        "Admin panel for election control",
-        "Voter verification & audit trail",
+        "Secure voter authentication",
+        "Candidate profile management",
+        "Real-time vote counting",
+        "Results visualization charts",
+        "Admin election control panel",
+        "Audit trail and verification",
       ],
       demoType: "interactive",
       status: "Ready for Vercel Deployment",
-      techIcons: ["PHP", "MySQL", "Chart.js", "Security"],
+      techIcons: ["PHP", "MySQL", "Chart.js"],
+      hasVideo: false,
     },
     {
       id: 4,
-      title: "Gas Management System",
+      title: "CodeHeaven",
       description:
-        "Comprehensive gas cylinder distribution and inventory management system for suppliers and customers.",
-      tags: [
-        "PHP",
-        "MySQL",
-        "Bootstrap",
-        "PDF Generation",
-        "Inventory",
-        "Reports",
-      ],
-      color: "from-orange-600 to-red-600",
-      icon: <FlaskConical className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://gas-management-yourusername.vercel.app",
-      githubUrl: "https://github.com/yourusername/gas-management",
+        "Developer community platform with code sharing, tutorials, and collaboration tools for programmers.",
+      tags: ["PHP", "MySQL", "JavaScript", "Bootstrap", "Code Editor"],
+      color: "from-yellow-500 to-yellow-600",
+      icon: <Database className="w-5 h-5" />,
+      image: codeHeavenHero,
+      thumbnail: codeHeavenHero,
+      screenshots: [codeHeavenHero, codeHeavenImg2, codeHeavenImg3, codeHeavenImg4],
+      demoUrl: "https://faji-tech-vision-academy-ki2s.vercel.app",
+      githubUrl: "https://github.com/yourusername/codeheaven",
       features: [
-        "Customer & supplier management",
-        "Cylinder inventory tracking system",
-        "Order processing & delivery tracking",
-        "Automated billing & invoicing",
-        "Sales reports & analytics dashboard",
-        "PDF invoice generation",
+        "Code snippet sharing",
+        "Tutorial publishing system",
+        "Developer community forums",
+        "Syntax highlighting editor",
+        "Project collaboration tools",
+        "Knowledge base library",
       ],
       demoType: "interactive",
       status: "Ready for Vercel Deployment",
-      techIcons: ["PHP", "MySQL", "Bootstrap", "PDF"],
+      techIcons: ["PHP", "MySQL", "JavaScript"],
+      hasVideo: false,
     },
     {
       id: 5,
-      title: "E-Commerce Platform",
+      title: "Weather+Route",
       description:
-        "Full online shopping platform with user authentication, product catalog, shopping cart, and payment processing.",
-      tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "JWT"],
-      color: "from-yellow-600 to-amber-600",
-      icon: <Database className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://ecommerce-demo.example.com",
-      githubUrl: "https://github.com/username/ecommerce-platform",
+        "Integrated weather forecasting and route planning application with real-time conditions and navigation.",
+      tags: ["React", "TypeScript", "API Integration", "Maps", "Tailwind CSS"],
+      color: "from-purple-600 to-purple-800",
+      icon: <Cloud className="w-5 h-5" />,
+      image: weather1,
+      thumbnail: weather1,
+      screenshots: [weather1, weather2, weather3, weather5, weather6],
+      demoUrl: "https://weather-route-demo.example.com",
+      githubUrl: "https://github.com/falmiabdi/EthioWeatherApp",
       features: [
-        "User authentication & authorization",
-        "Product catalog with categories",
-        "Shopping cart & wishlist",
-        "Payment processing with Stripe",
-        "Order tracking & history",
-        "Admin product management",
+        "Real-time weather data",
+        "Route optimization",
+        "Location-based forecasts",
+        "Interactive weather maps",
+        "Severe weather alerts",
+        "Multi-city support",
       ],
       demoType: "interactive",
       status: "Live Demo Available",
-      techIcons: ["React", "Node.js", "MongoDB", "Stripe"],
+      techIcons: ["React", "TypeScript", "API"],
+      hasVideo: false,
     },
     {
       id: 6,
-      title: "Task Management App",
+      title: "Chella Gram",
       description:
-        "Real-time task management application with team collaboration features and progress tracking.",
-      tags: ["JavaScript", "Firebase", "React", "WebSockets", "Bootstrap"],
-      color: "from-teal-600 to-cyan-600",
-      icon: <Users className="w-5 h-5" />,
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      demoUrl: "https://taskmanager-demo.example.com",
-      githubUrl: "https://github.com/username/task-management",
+        "Community platform for local neighborhoods with event management, announcements, and community discussions.",
+      tags: ["React", "Node.js", "MongoDB", "Socket.io", "Express"],
+      color: "from-yellow-500 to-yellow-600",
+      icon: <Building2 className="w-5 h-5" />,
+      image: chellaHero,
+      thumbnail: chellaHero,
+      screenshots: [chellaHero, chellaHero2, chellaDashboard],
+      demoUrl: "https://chella-gram.vercel.app/",
+      githubUrl: "https://github.com/falmiabdi/Chella-Gram",
       features: [
-        "Real-time task updates",
-        "Team collaboration features",
-        "Progress tracking & deadlines",
-        "File attachments & comments",
-        "User roles & permissions",
-        "Notification system",
+        "Community event scheduling",
+        "Local announcements board",
+        "Neighborhood discussions",
+        "Resource sharing system",
+        "Volunteer coordination",
+        "Local business directory",
       ],
       demoType: "interactive",
       status: "Live Demo Available",
-      techIcons: ["React", "Firebase", "WebSockets", "Bootstrap"],
+      techIcons: ["React", "Node.js", "MongoDB"],
+      hasVideo: false,
+    },
+    {
+      id: 7,
+      title: "FamDictionary",
+      description:
+        "Multilingual family dictionary and language learning app with audio pronunciations, flashcards, and progress tracking.",
+      tags: ["React Native", "Firebase", "Expo", "Audio API", "Redux"],
+      color: "from-purple-600 to-purple-800",
+      icon: <MessageSquare className="w-5 h-5" />,
+      image: famDictImg,
+      thumbnail: famDictImg,
+      screenshots: [famDictImg],
+      demoUrl: "https://famdictionary-demo.example.com",
+      githubUrl: "https://github.com/falmiabdi/FamDictionary",
+      features: [
+        "Multi-language support",
+        "Audio pronunciations",
+        "Flashcard learning system",
+        "Progress tracking and streaks",
+        "Offline dictionary access",
+        "Family sharing features",
+      ],
+      demoType: "interactive",
+      status: "Live Demo Available",
+      techIcons: ["React Native", "Firebase", "Expo"],
+      hasVideo: false,
+    },
+    {
+      id: 8,
+      title: "HireHub",
+      description:
+        "Modern job marketplace connecting employers with qualified candidates featuring AI-powered matching and interview scheduling.",
+      tags: ["React", "Node.js", "PostgreSQL", "AI/ML", "Stripe"],
+      color: "from-yellow-500 to-yellow-600",
+      icon: <Briefcase className="w-5 h-5" />,
+      image: hireHubHero,
+      thumbnail: hireHubHero,
+      screenshots: [hireHubHero, hireHubDashboard1, hireHubDashboard2, hireHubDashboard3, hireHubImg2, hireHubImg3, hireHubImg4, hireHubImg5],
+      demoUrl: "https://hirehub-demo.example.com",
+      githubUrl: "https://github.com/falmiabdi/HireHub",
+      features: [
+        "AI job-candidate matching",
+        "Interview scheduling system",
+        "Resume parsing and analysis",
+        "Company branding pages",
+        "Applicant tracking system",
+        "Secure payment processing",
+      ],
+      demoType: "interactive",
+      status: "Live Demo Available",
+      techIcons: ["React", "Node.js", "PostgreSQL"],
+      hasVideo: false,
     },
   ];
 
   const ProjectDemoModal = ({ project }: { project: any }) => {
+    const [currentScreenshotIndex, setCurrentScreenshotIndex] = useState(0);
+
     return (
       <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-3">
         <div className="relative w-full max-w-4xl max-h-[90vh] bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
@@ -225,7 +329,7 @@ const Projects = () => {
                     {project.status}
                   </span>
                   <span className="text-gray-400 text-sm">
-                    • Ready for Vercel
+                    • {project.hasVideo ? "Has Demo Video" : "Screenshots Available"}
                   </span>
                 </div>
               </div>
@@ -291,11 +395,37 @@ const Projects = () => {
                           <div className="w-12 h-1 bg-gray-700 rounded"></div>
                         </div>
                         <div className="rounded-xl overflow-hidden mt-1">
-                          <img
-                            src={project.image}
-                            alt={`${project.title} demo`}
-                            className="w-full h-64 object-cover"
-                          />
+                          {/* Always show screenshots - no video conditional */}
+                          <div className="relative">
+                            <img
+                              src={project.screenshots[currentScreenshotIndex] || project.image}
+                              alt={`${project.title} screenshot ${currentScreenshotIndex + 1}`}
+                              className="w-full h-64 object-cover"
+                            />
+                            {project.screenshots.length > 1 && (
+                              <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+                                <button
+                                  onClick={() => setCurrentScreenshotIndex(prev => 
+                                    prev === 0 ? project.screenshots.length - 1 : prev - 1
+                                  )}
+                                  className="px-2 py-1 bg-black/50 rounded text-white text-xs"
+                                >
+                                  Previous
+                                </button>
+                                <span className="px-2 py-1 bg-black/50 rounded text-white text-xs">
+                                  {currentScreenshotIndex + 1} / {project.screenshots.length}
+                                </span>
+                                <button
+                                  onClick={() => setCurrentScreenshotIndex(prev => 
+                                    prev === project.screenshots.length - 1 ? 0 : prev + 1
+                                  )}
+                                  className="px-2 py-1 bg-black/50 rounded text-white text-xs"
+                                >
+                                  Next
+                                </button>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       </div>
                     ) : (
@@ -307,46 +437,53 @@ const Projects = () => {
                             <div className="w-3 h-3 rounded-full bg-green-500"></div>
                           </div>
                         </div>
-                        <img
-                          src={project.image}
-                          alt={`${project.title} demo`}
-                          className="w-full h-48 object-cover"
-                        />
+                        {/* Always show screenshots - no video conditional */}
+                        <div className="relative">
+                          <img
+                            src={project.screenshots[currentScreenshotIndex] || project.image}
+                            alt={`${project.title} screenshot ${currentScreenshotIndex + 1}`}
+                            className="w-full h-80 object-cover"
+                          />
+                          {project.screenshots.length > 1 && (
+                            <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+                              <button
+                                onClick={() => setCurrentScreenshotIndex(prev => 
+                                  prev === 0 ? project.screenshots.length - 1 : prev - 1
+                                )}
+                                className="px-2 py-1 bg-black/50 rounded text-white text-xs hover:bg-black/70"
+                              >
+                                ◀
+                              </button>
+                              <span className="px-2 py-1 bg-black/50 rounded text-white text-xs">
+                                {currentScreenshotIndex + 1} / {project.screenshots.length}
+                              </span>
+                              <button
+                                onClick={() => setCurrentScreenshotIndex(prev => 
+                                  prev === project.screenshots.length - 1 ? 0 : prev + 1
+                                )}
+                                className="px-2 py-1 bg-black/50 rounded text-white text-xs hover:bg-black/70"
+                              >
+                                ▶
+                              </button>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     )}
                   </div>
 
                   <div className="mt-4 p-4 bg-gray-800/50 rounded-lg border border-gray-700">
                     <p className="text-gray-300 text-sm mb-3">
-                      {project.id <= 4
-                        ? "This project is ready for deployment on Vercel. Click below for deployment instructions."
-                        : "Interactive demo available at:"}
+                      📸 Browse through screenshots above to see project features.
                     </p>
                     <a
-                      href={
-                        project.id <= 4
-                          ? `#deploy-${project.id}`
-                          : project.demoUrl
-                      }
-                      target={project.id <= 4 ? "_self" : "_blank"}
+                      href={project.githubUrl}
+                      target="_blank"
                       rel="noopener noreferrer"
-                      className={`block w-full py-2.5 rounded text-white font-medium text-sm text-center transition-all duration-300 ${
-                        project.id <= 4
-                          ? "bg-gradient-to-r from-yellow-600 to-orange-700 hover:from-yellow-700 hover:to-orange-800"
-                          : "bg-gradient-to-r from-yellow-600 to-orange-700 hover:from-orange-800 hover:to-yellow-700"
-                      }`}
+                      className="block w-full py-2.5 rounded bg-gray-700 hover:bg-gray-600 text-white font-medium text-sm text-center transition-all duration-300"
                     >
-                      {project.id <= 4 ? (
-                        <>
-                          <ExternalLink className="w-4 h-4 inline mr-2" />
-                          View Vercel Deployment Guide
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-4 h-4 inline mr-2" />
-                          Launch Interactive Demo
-                        </>
-                      )}
+                      <Github className="w-4 h-4 inline mr-2" />
+                      View Source Code on GitHub
                     </a>
                   </div>
                 </div>
@@ -403,7 +540,7 @@ const Projects = () => {
                     className="flex-1 py-2.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-white flex items-center justify-center gap-2 text-sm font-medium transition-colors"
                   >
                     <Github className="w-4 h-4" />
-                    View Source Code
+                    Source Code
                   </a>
                   <a
                     href={project.demoUrl}
@@ -428,186 +565,116 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-12 md:py-20 bg-black">
-      <div className="container mx-auto px-3">
+    <section id="projects" className="py-16 md:py-24 lg:py-32 bg-black">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
             <span className="text-yellow-400">My Real </span>
             <span className="text-white">Full-Stack Projects</span>
           </h2>
           <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
-            4 complete PHP/MySQL applications ready for Vercel deployment + 2
-            demo projects
+            4 complete PHP/MySQL applications ready for Vercel deployment + 4
+            React/Node.js projects with screenshots and demos
           </p>
         </div>
 
         {/* Project Filters */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           <button className="px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium">
-            All Projects (6)
+            All Projects (8)
           </button>
           <button className="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 text-sm font-medium">
             PHP/MySQL (4)
           </button>
           <button className="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 text-sm font-medium">
-            React/Node.js (2)
-          </button>
-          <button className="px-4 py-2 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-300 text-sm font-medium">
-            Live Demos
+            React/Node.js (4)
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.map((project, index) => (
-            <div key={project.id} className="group relative">
-              <Card className="bg-gray-900 overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all duration-300 h-full hover:scale-[1.02]">
-                {/* Project Header with Icon */}
-                <div className="relative h-40 md:h-48 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {projects.map((project) => {
+            const isDeployed = [1, 4, 6].includes(project.id);
+            const isHovered = hoveredProject === project.id;
+            
+            return (
+              <Card
+                key={project.id}
+                className="bg-gray-900 border border-gray-800 hover:border-blue-500/30 transition-all duration-300 h-full hover:scale-[1.02] flex flex-col min-h-[320px] cursor-pointer overflow-hidden"
+                onMouseEnter={() => setHoveredProject(project.id)}
+                onMouseLeave={() => setHoveredProject(null)}
+                onClick={() => setSelectedProject(project.id)}
+              >
+                {/* Thumbnail Image with hover animation */}
+                <div className="relative h-32 md:h-36 overflow-hidden group">
                   <img
-                    src={project.image}
+                    src={project.thumbnail || project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent`}
-                  />
-
-                  {/* Project Icon */}
-                  <div
-                    className={`absolute top-3 left-3 p-2 rounded-lg bg-gradient-to-r ${project.color} shadow-lg`}
-                  >
-                    {project.icon}
-                  </div>
-
-                  {/* Status Badge */}
-                  <div className="absolute top-3 right-3">
-                    <span
-                      className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-                        project.id <= 4
-                          ? "bg-blue-500/20 text-blue-400 border border-blue-500/30"
-                          : "bg-green-500/20 text-green-400 border border-green-500/30"
-                      }`}
-                    >
-                      {project.id <= 4 ? "Ready for Vercel" : "Live Demo"}
-                    </span>
-                  </div>
-
-                  {/* Demo Overlay */}
-                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-2">
-                    <Button
-                      onClick={() => setSelectedProject(project.id)}
-                      size="sm"
-                      className={`bg-gradient-to-r ${project.color} hover:opacity-90 text-white shadow-lg font-medium`}
-                    >
-                      <Play className="w-4 h-4 mr-1" />
-                      {project.id <= 4 ? "View Project" : "Try Demo"}
-                    </Button>
-                    <Button
-                      size="sm"
-                      className="bg-gray-800 hover:bg-gray-700 text-white shadow-lg font-medium"
-                      onClick={() => window.open(project.githubUrl, "_blank")}
-                    >
-                      <Github className="w-4 h-4 mr-1" />
-                      Code
-                    </Button>
+                  {/* Hover overlay with image icon */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="animate-bounce">
+                      <ImageIcon className="w-8 h-8 text-white" />
+                    </div>
                   </div>
                 </div>
-
+                
                 {/* Project Info */}
-                <div className="p-4">
-                  <div className="flex items-start justify-between mb-2">
-                    <div>
-                      <h3 className="text-lg md:text-xl font-bold text-white mb-1">
-                        {project.title}
-                      </h3>
-                      <p className="text-gray-400 text-xs">
-                        {project.id <= 4
-                          ? "Full-Stack PHP Application"
-                          : "Demo Project"}
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => setSelectedProject(project.id)}
-                      className="p-2 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 transition-colors"
-                      title="View Project Details"
-                    >
-                      <Eye className="w-4 h-4 text-blue-400" />
-                    </button>
-                  </div>
-
-                  <p className="text-gray-300 text-sm mb-3 leading-relaxed line-clamp-2">
+                <div className="p-3 flex flex-col flex-1">
+                  <h3 className="text-base md:text-lg font-bold text-white mb-1 line-clamp-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-300 text-xs mb-2 leading-relaxed line-clamp-3">
                     {project.description}
                   </p>
-
-                  {/* Quick Features */}
-                  <div className="mb-3">
-                    <div className="flex flex-wrap gap-1.5">
-                      {project.features
-                        .slice(0, 2)
-                        .map((feature: string, idx: number) => (
-                          <span
-                            key={idx}
-                            className="px-2 py-1 bg-gray-800/50 text-gray-300 rounded text-xs"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      {project.features.length > 2 && (
-                        <span
-                          className={`px-2 py-1 rounded text-xs ${
-                            project.id <= 4
-                              ? "bg-blue-600/20 text-blue-400"
-                              : "bg-green-600/20 text-green-400"
-                          }`}
-                        >
-                          +{project.features.length - 2} more
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Tech Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 bg-gray-800 text-gray-400 rounded-full text-xs border border-gray-700"
-                      >
+                  {/* Tech stack mini badges */}
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {project.tags.slice(0, 3).map((tag: string) => (
+                      <span key={tag} className="text-[10px] px-1.5 py-0.5 bg-gray-800 rounded text-gray-400">
                         {tag}
                       </span>
                     ))}
-                    {project.tags.length > 3 && (
-                      <span className="px-2.5 py-1 bg-gray-900 text-gray-500 rounded-full text-xs">
-                        +{project.tags.length - 3}
-                      </span>
+                  </div>
+                  <div className="mt-auto flex gap-2">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 text-white flex items-center justify-center gap-2 text-xs font-medium transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                    {isDeployed && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-2 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white flex items-center justify-center gap-2 text-xs font-medium transition-colors"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live Demo
+                      </a>
+                    )}
+                    {!isDeployed && (
+                      <button
+                        className="flex-1 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white flex items-center justify-center gap-2 text-xs font-medium transition-colors"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedProject(project.id);
+                        }}
+                      >
+                        <Play className="w-4 h-4" />
+                        Preview
+                      </button>
                     )}
                   </div>
-
-                  {/* Action Button */}
-                  <button
-                    onClick={() => setSelectedProject(project.id)}
-                    className={`w-full py-2.5 rounded-lg text-white font-medium text-sm transition-all duration-300 flex items-center justify-center gap-2 ${
-                      project.id <= 4
-                        ? "bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-700 hover:to-orange-700"
-                        : "bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700"
-                    }`}
-                  >
-                    {project.id <= 4 ? (
-                      <>
-                        <ExternalLink className="w-4 h-4" />
-                        Deploy on Vercel
-                      </>
-                    ) : (
-                      <>
-                        <Play className="w-4 h-4" />
-                        Try Live Demo
-                      </>
-                    )}
-                  </button>
                 </div>
               </Card>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Demo Modal */}
@@ -617,28 +684,6 @@ const Projects = () => {
           />
         )}
 
-        {/* Stats Section */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-gradient-to-br from-blue-900/30 to-blue-600/10 p-4 rounded-xl border border-blue-800/30 text-center">
-            <div className="text-3xl font-bold text-blue-400">4</div>
-            <div className="text-gray-300 text-sm">PHP/MySQL Projects</div>
-          </div>
-          <div className="bg-gradient-to-br from-green-900/30 to-green-600/10 p-4 rounded-xl border border-green-800/30 text-center">
-            <div className="text-3xl font-bold text-green-400">6</div>
-            <div className="text-gray-300 text-sm">React Projects</div>
-          </div>
-          <div className="bg-gradient-to-br from-purple-900/30 to-purple-600/10 p-4 rounded-xl border border-purple-800/30 text-center">
-            <div className="text-3xl font-bold text-purple-400">10</div>
-            <div className="text-gray-300 text-sm">Total Projects</div>
-          </div>
-          <div className="bg-gradient-to-br from-yellow-900/30 to-yellow-600/10 p-4 rounded-xl border border-yellow-800/30 text-center">
-            <div className="text-3xl font-bold text-yellow-400">100%</div>
-            <div className="text-gray-300 text-sm">Vercel Ready</div>
-          </div>
-        </div>
-
-        {/* Vercel Deployment Notice */}
-        
       </div>
     </section>
   );

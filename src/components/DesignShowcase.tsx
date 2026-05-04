@@ -50,7 +50,7 @@ const DesignShowcase = () => {
   };
 
   return (
-    <section id="DesignShowcase" className="bg-[#0b0d17] py-20 px-8 text-white">
+    <section id="DesignShowcase" className="bg-black py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 text-white">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4">
           Graphis, Mobile & Web <span className="text-yellow-500">Designs</span>
@@ -61,10 +61,10 @@ const DesignShowcase = () => {
         <div className="flex justify-center mb-12">
           <button
             onClick={() => setGlobalPaused(!globalPaused)}
-            className={`px-6 py-3 rounded-lg font-medium ${
+            className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               globalPaused
-                ? "bg-red-600 hover:bg-red-700"
-                : "bg-yellow-600 hover:bg-yellow-700"
+                ? "bg-red-600 hover:bg-red-700 text-white"
+                : "bg-primary text-primary-foreground hover:bg-primary/90"
             }`}
           >
             {globalPaused ? "▶ Resume All Columns" : "⏸ Pause All Columns"}

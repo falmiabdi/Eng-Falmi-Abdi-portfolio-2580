@@ -119,8 +119,8 @@ const CompactTestimonials = () => {
   };
 
   return (
-    <section id="CompactTestimonials" className="py-12 bg-black text-white overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="CompactTestimonials" className="py-16 md:py-24 lg:py-32 bg-black text-white overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold mb-2">
             <span className="text-yellow-400">Client</span> Feedback
@@ -247,7 +247,7 @@ const CompactTestimonials = () => {
         {/* Yellow CTA Button */}
         <div className="mt-6 text-center">
           <button
-            className="px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/30 flex items-center gap-2 mx-auto"
+            className="px-8 py-3 bg-primary text-primary-foreground font-bold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/30 flex items-center gap-2 mx-auto"
             onClick={() => window.open("#contact", "_self")}
           >
             <Github className="w-5 h-5" />

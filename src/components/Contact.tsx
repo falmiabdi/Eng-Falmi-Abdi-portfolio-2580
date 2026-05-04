@@ -134,14 +134,14 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-32 relative bg-black">
+    <section id="contact" className="py-16 md:py-24 lg:py-32 relative bg-black">
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-yellow-500/5 rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-yellow-400">Get In</span>{" "}
@@ -278,8 +278,9 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-bold border-0 disabled:opacity-50 disabled:cursor-not-allowed"
+                  variant="primary"
                   size="lg"
+                  className="w-full sm:w-auto"
                 >
                   {isSubmitting ? (
                     <>
@@ -298,7 +299,7 @@ const Contact = () => {
                   type="button"
                   variant="outline"
                   onClick={handleCallClick}
-                  className="w-full sm:w-auto border-2 border-yellow-500 text-yellow-400 hover:bg-yellow-500/10 hover:border-yellow-400 hover:text-yellow-300"
+                  className="w-full sm:w-auto"
                   size="lg"
                 >
                   <Phone className="mr-2 w-4 h-4" />
@@ -319,7 +320,7 @@ const Contact = () => {
           </p>
           <div className="mt-4 flex justify-center gap-4">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/falmi-jabessa-31b820375"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors"

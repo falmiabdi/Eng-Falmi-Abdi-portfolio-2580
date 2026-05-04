@@ -4,10 +4,11 @@ import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
+import Certificates from "@/components/Certificates";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import DesignShowcase from "@/components/DesignShowcase";
-import CompactTestimonials from "@/components/CompactTestimonials";
+
 
 const Index = () => {
   return (
@@ -20,7 +21,7 @@ const Index = () => {
         <Services />
         <DesignShowcase/>
         <Projects />
-        <CompactTestimonials/>
+        <Certificates />
         <Contact />
       </main>
       <Footer />

@@ -93,7 +93,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-12 md:py-20 bg-black relative overflow-hidden"
+      className="py-16 md:py-24 lg:py-32 bg-black relative overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -102,8 +102,8 @@ const About = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-yellow-500/3 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Image with Floating Stats */}
           <div className="relative">
             {/* Main Image Container */}
@@ -118,11 +118,11 @@ const About = () => {
                 />
 
                 {/* Floating Elements */}
-                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center animate-bounce shadow-lg shadow-yellow-500/30">
+                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg shadow-yellow-500/30">
                   <Sparkles className="w-5 h-5 text-black" />
                 </div>
 
-                <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center animate-bounce delay-300 shadow-lg shadow-purple-500/30">
+                <div className="absolute -bottom-3 -left-3 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/30">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
               </div>
@@ -175,103 +175,35 @@ const About = () => {
             </div>
 
             {/* Description - White text on black */}
+
             <div className="space-y-4">
               <p className="text-white leading-relaxed">
-                Passionate{" "}
-                <span className="text-yellow-400 font-semibold">
-                  Software Engineer
-                </span>{" "}
-                specializing in creating clean, scalable solutions for complex
-                problems. I blend technical expertise with creative vision to
-                build digital experiences that users love.
+                Hi, I’m <span className="text-yellow-400 font-semibold">Falmi Tesfaye</span> — a passionate Software Engineer and Full-Stack Developer focused on building modern, responsive, and user-friendly web and mobile applications.
               </p>
-
               <p className="text-white leading-relaxed">
-                Currently working full-time as a{" "}
-                <span className="text-purple-400 font-semibold">
-                  Frontend Developer & UI/UX Designer
-                </span>
-                , while actively contributing to open-source projects and
-                exploring the exciting world of Artificial Intelligence and
-                Machine Learning.
+                I specialize in frontend development with <span className="text-yellow-400 font-semibold">React, Next.js, Tailwind CSS, and React Native</span>, while also working confidently on backend technologies like <span className="text-purple-400 font-semibold">Node.js, Express.js, PHP, Python, MySQL, MongoDB, and PostgreSQL</span>. I enjoy turning ideas into clean, scalable, and high-performing digital products.
               </p>
-
               <p className="text-white leading-relaxed">
-                My philosophy is simple: create technology that's not only
-                functional but also{" "}
-                <span className="text-yellow-400 font-semibold">
-                  makes a real difference
-                </span>{" "}
-                in people's lives through thoughtful design and innovative
-                solutions.
+                I’ve worked on multiple frontend and full-stack projects, creating responsive interfaces, REST API integrations, admin dashboards, and mobile-friendly applications with a strong focus on performance and user experience.
+              </p>
+              <p className="text-white leading-relaxed">
+                Beyond coding, I’m passionate about UI/UX design using Figma and continuously exploring AI, DevOps, and modern software development practices to improve my skills and deliver better solutions.
+              </p>
+              <p className="text-white leading-relaxed">
+                I’m open to Frontend, Full-Stack, and Mobile App development opportunities — both remote and local — and I’m always excited to work on projects that create real impact.
               </p>
             </div>
 
             {/* Core Skills */}
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold text-yellow-400 mb-3 flex items-center gap-2">
-                <Target className="w-5 h-5" />
-                Core Expertise
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  {
-                    skill: "UI/UX Design",
-                    color:
-                      "bg-yellow-500/20 text-yellow-300 border-yellow-500/40",
-                  },
-                  {
-                    skill: "Frontend Development",
-                    color:
-                      "bg-purple-500/20 text-purple-300 border-purple-500/40",
-                  },
-                  {
-                    skill: "React & Next.js",
-                    color:
-                      "bg-yellow-500/20 text-yellow-300 border-yellow-500/40",
-                  },
-                  {
-                    skill: "TypeScript",
-                    color:
-                      "bg-purple-500/20 text-purple-300 border-purple-500/40",
-                  },
-                  {
-                    skill: "AI/ML Concepts",
-                    color:
-                      "bg-yellow-500/20 text-yellow-300 border-yellow-500/40",
-                  },
-                  {
-                    skill: "Responsive Design",
-                    color:
-                      "bg-purple-500/20 text-purple-300 border-purple-500/40",
-                  },
-                  {
-                    skill: "Figma",
-                    color:
-                      "bg-yellow-500/20 text-yellow-300 border-yellow-500/40",
-                  },
-                  {
-                    skill: "Tailwind CSS",
-                    color:
-                      "bg-purple-500/20 text-purple-300 border-purple-500/40",
-                  },
-                ].map((item, index) => (
-                  <span
-                    key={index}
-                    className={`px-3 py-1.5 rounded-full text-sm font-medium border ${item.color} hover:scale-105 transition-all duration-300 cursor-default`}
-                  >
-                    {item.skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+            {/* Skills section replaced by About summary above */}
 
             {/* Read More Dialog */}
             <Dialog>
               <DialogTrigger asChild>
                 <Button
-                  variant="default"
-                  className="mt-6 bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-semibold border-0 shadow-lg hover:shadow-yellow-500/30"
+                  variant="primary"
+                  size="lg"
+                  className="mt-6"
                 >
                   <span>Explore My Journey</span>
                   <Rocket className="w-4 h-4 ml-2" />

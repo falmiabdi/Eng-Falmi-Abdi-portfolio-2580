@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="flex gap-3 flex-wrap justify-center">
             {/* GitHub - Yellow */}
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/falmiabdi"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-yellow-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20 group"
@@ -50,7 +50,7 @@ const Footer = () => {
 
             {/* LinkedIn - Purple */}
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/falmi-jabessa-31b820375"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 group"
@@ -64,7 +64,7 @@ const Footer = () => {
 
             {/* Instagram - Purple */}
             <a
-              href="https://instagram.com/yourusername"
+              href="https://instagram.com/felmiabdi"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 group"
@@ -78,7 +78,7 @@ const Footer = () => {
 
             {/* Facebook - Purple */}
             <a
-              href="https://facebook.com/yourusername"
+              href="https://web.facebook.com/profile.php?id=100070991113660"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 group"
@@ -92,7 +92,7 @@ const Footer = () => {
 
             {/* YouTube - Yellow */}
             <a
-              href="https://youtube.com/yourchannel"
+              href="https://www.youtube.com/channel/UCePem2BOG1XBq2-OyGK1-Ug"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-yellow-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20 group"
@@ -106,7 +106,7 @@ const Footer = () => {
 
             {/* Email - Purple */}
             <a
-              href="mailto:falmi@example.com"
+              href="mailto:falmitesfaye@gmail.com"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-purple-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20 group"
               title="Email"
             >
@@ -132,7 +132,7 @@ const Footer = () => {
 
             {/* Code/Projects - Yellow */}
             <a
-              href="https://github.com/yourusername?tab=repositories"
+              href="https://github.com/falmiabdi?tab=repositories"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-black/80 backdrop-blur-sm rounded-full border border-gray-800 hover:border-yellow-500 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-yellow-500/20 group"
